@@ -1,6 +1,10 @@
 package com.cjx.spring.domain;
 
-public class City {
+import java.io.Serializable;
+
+public class City implements Serializable {
+
+    private static final long serialVersionUID = -1L;
 
     /**
      * 城市编号
