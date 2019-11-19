@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.cjx.spring.dao.CityDao">
+<mapper namespace="com.cjx.spring.dao.master.CityDao">
     <resultMap id="BaseResultMap" type="com.cjx.spring.domain.City">
         <result column="id" property="id" />
         <result column="province_id" property="provinceId" />
@@ -25,14 +25,14 @@
         from city
     </select>
     
-    <insert id="saveCity" parameterType="City" useGeneratedKeys="true" keyProperty="id">
+    <insert id="saveCity" parameterType="com.cjx.spring.domain.City" useGeneratedKeys="true" keyProperty="id">
         insert into
         city(d,province_id,city_name,description)
         values
         (#{id},#{provinceId},#{cityName},#{description})
     </insert>
 
-    <update id="updateCity" parameterType="City">
+    <update id="updateCity" parameterType="com.cjx.spring.domain.City">
         update
         city
         set

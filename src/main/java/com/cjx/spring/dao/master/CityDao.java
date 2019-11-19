@@ -1,4 +1,4 @@
-package com.cjx.spring.dao;
+package com.cjx.spring.dao.master;
 
 import com.cjx.spring.domain.City;
 import org.apache.ibatis.annotations.Param;

@@ -1,7 +1,7 @@
 package com.cjx.spring.service.impl;
 
 import com.cjx.spring.dao.AnnoCityDao;
-import com.cjx.spring.dao.CityDao;
+import com.cjx.spring.dao.master.CityDao;
 import com.cjx.spring.domain.City;
 import com.cjx.spring.service.CityService;
 import org.slf4j.Logger;
@@ -19,7 +19,7 @@ public class CityServiceImpl implements CityService {
     private static final Logger LOGGER = LoggerFactory.getLogger(CityServiceImpl.class);
 
     @Autowired
-    private CityDao cityDao;
+    private CityDao cityDao; // 从数据源
 
     @Autowired
     private AnnoCityDao annoCityDao;
